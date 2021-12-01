@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bellybutton Biodiversity</title>
+
+    <!-- Bootstrap and Bootswatch CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/united/bootstrap.min.css">
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+
+    <!-- Visualization Libs -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="./static/js/app.js"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 jumbotron text-primary bg-white text-center">
+                <h1>What's In Your Belly Button?</h1>
+                <h2>Biodiversity Dashboard</h2>
+                <p>Explore the interactive charts to display interesting information on the dataset.</p>
+                <p>Created by: Alisha Hill-McElroy</p>
+            </div>
+        </div>
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-body">
+                <h4 class="card-title">Homework Write Up</h4>
+                <p class="card-text">Our belly buttons play a very important role in the beginning of life. It's the primary entry point for nutrients from a mother to her unborn child. Since the belly button serves such an important role, it's still a part of the body many
+                    people don't discuss or pay attention to. This dataset studied several individuals' belly button microbes and the factors that could have influence its growth.</p>
+                <p>For more information regarding this very insightful dataset, please visit:
+                    <a href="http://robdunnlab.com/projects/belly-button-biodiversity/" , target="_blank">http://robdunnlab.com/projects/belly-button-biodiversity/</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <div class="well">
+                    <h5>Test Subject ID No.:</h5>
+                    <select id="selDataset"></select>
+                </div>
+                <br>
+                <div class="card border-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-header">Demographic Info</div>
+                    <div id="sample-metadata" class="card-body"></div>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div id="bar"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="bubble"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
