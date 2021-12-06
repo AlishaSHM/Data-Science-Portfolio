@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+    <head>
+        <!-- meta charset -->
+        <meta charset="utf-8">
+        <!-- site title -->
+        <title>SMU Capstone | Salary Calcultor</title>
+        <!-- meta description -->
+        <meta name="description" content="">
+        <!-- mobile viwport meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- fevicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        
+        <!-- ================================
+        CSS Files
+        ================================= -->
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i|Open+Sans:400,600,700,800" rel="stylesheet">
+        <link rel="stylesheet" href="static/css/themefisher-fonts.min.css">
+        <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="static/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/css/main.css">
+        <link rel="stylesheet" href="static/css/dark.css">
+         <!-- Visualization Libs -->
+         <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    </head>
+
+    <body class="dark">
+
+        <div class="preloader">
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+            <div class="loading-mask"></div>
+        </div>
+
+        <main class="site-wrapper">
+            <div class="pt-table">
+                <div class="pt-tablecell page-resume relative">
+                    <!-- .close -->
+                    <a href="./" class="page-close"><i class="tf-ion-close"></i></a>
+                    <!-- /.close -->
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
+                                <div class="page-title text-center">
+                                    <h2>Salary <span class="primary">Calculator</span> <span class="title-bg">Calculator</span></h2>
+                                    <h3>Populate all Salary Calculator Input Fields below to receive your Salary Prediction.</h3>
+                                </div>
+                            </div>
+                        </div> <!-- /.row -->
+                    </div>
+
+                    <div class="container" id="calculator">
+                        <div class="row">
+                            <div class="col-md-5">
+
+                                <div class="row">                         
+                                    <div class="col-md-12">
+                                        <div class="section-title clear">
+                                            <h3>Salary Calculator Input Fields</h3>
+                                            <span class="bar-dark"></span>
+                                            <span class="bar-primary"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <div class="row">                         
+                                    <div class="col-md-12">
+                                        <div class="input-field">
+                                            <label for="jobTitle"><h4>Job Title</h4></label>
+                                            <h5><select id="jobTitle">
+                                                <option value="default"></option>
+                                                <option value="Data Scientist">Data Scientist</option>
+                                                <option value="Driver">Driver</option>
+                                                <option value="Financial Analyst">Financial Analyst</option>
+                                                <option value="Graphic Designer">Graphic Designer</option>
+                                                <option value="IT">IT</option>
+                                                <option value="Manager">Manager</option>
+                                                <option value="Marketing Associate">Marketing Associate</option>
+                                                <option value="Sales Associate">Sales Associate</option>
+                                                <option value="Software Engineer">Software Engineer</option>
+                                                <option value="Warehouse Associate">Warehouse Associate</option>
+                                            </select></h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">                         
+                                    <div class="col-md-12">
+                                        <div class="input-field">
+                                            <label for="department"><h4>Department</h4></label>
+                                            <h5><select id="department">
+                                                <option value="default"></option>
+                                                <option value="Administration">Administration</option>
+                                                <option value="Engineering">Engineering</option>
+                                                <option value="Management">Management</option>
+                                                <option value="Operations">Operations</option>
+                                                <option value="Sales">Sales</option>
+                                            </select></h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">      
+
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <label for="gender"><h4>Gender</h4></label>
+                                            <h5><select id="gender">
+                                                <option value="default"></option>
+                                                <option value="1">Female</option>
+                                                <option value="0">Male</option>
+                                            </select></h5>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <label><h4>Age</h4></label>
+                                            <h5><input type="text" id="age" value="0"></h5>
+                                        </div>
+                                    </div> 
+
+                                    <div class="col-md-4">
+                                        <div class="input-field">
+                                            <label for="seniority"><h4>Senority</h4></label>
+                                            <h5><select id="seniority">
+                                                <option value="default"></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select></h5>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">                         
+                                    <div class="col-md-12">
+                                        <div class="input-field">
+                                            <span class="btn-border">
+                                                <button id="filter" class="btn btn-primary btn-custom-border text-uppercase">get prediction</button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-7">
+                                <div class="page-title2 text-center">
+                                    <h2>Estimated Salary<span class="primary"></span></h2></div>
+                                <div id="pred1"></div>
+                                <div class="page-title2 text-center">
+                                    <h2 id=pred2title><span class="primary"></span></h2></div>
+                                <div id="pred2"></div>
+                            </div>
+                        </div>
+                            
+
+                    <nav class="page-nav clear">
+                        <div class="container">
+                            <div class="flex flex-middle space-between">
+                                <span class="prev-page"><a href="/microdash" class="link">&larr; Prev Page</a></span>
+                                <!-- <span class="copyright hidden-xs">Copyright &copy; 2016 Phantom, All Rights Reserved.</span> -->
+                                <span class="next-page"><a href="/execsum" class="link">Next Page &rarr;</a></span>
+                            </div>
+                        </div>
+                        <!-- /.page-nav -->
+                    </nav>
+                    <!-- /.container -->
+
+                </div> <!-- /.pt-tablecell -->
+            </div> <!-- /.pt-table -->
+        </main> <!-- /.site-wrapper -->
+        
+        <!-- ================================
+        JavaScript Libraries
+        ================================= -->
+        <script src="static/js/vendor/jquery-2.2.4.min.js"></script>
+        <script src="static/js/vendor/bootstrap.min.js"></script>
+        <script src="static/js/jquery.easing.min.js"></script>
+        <script src="static/js/isotope.pkgd.min.js"></script>
+        <script src="static/js/jquery.nicescroll.min.js"></script>
+        <script src="static/js/owl.carousel.min.js"></script>
+        <script src="static/js/jquery-validation.min.js"></script>
+        <!-- <script src="js/form.min.js"></script> -->
+        <script src="static/js/main.js"></script>
+        <script src="static/js/calculator.js"></script>
+    </body>
+</html>
